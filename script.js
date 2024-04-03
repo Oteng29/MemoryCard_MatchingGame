@@ -1,4 +1,4 @@
-const symbols = ['♠️', '♥️', '♣️', '♦️', '🌟', '☘️', '⚡', '⚽'];
+const symbols = ['♠️', '♥️', '♣️', '♦️', '🌟', '☘️', '⚡', '⚽', '🌹'];
 
 const cards = [...symbols, ...symbols];
 
@@ -17,13 +17,19 @@ function createCard(symbol) {
   const cardElement = document.createElement('div');
   cardElement.classList.add('card');
   cardElement.dataset.symbol = symbol;
-  cardElement.innerHTML = `<span class="symbol">${symbol}</span>`;
+  const front = document.createElement('div');
+  front.classList.add('front');
+  const back = document.createElement('div');
+  back.classList.add('back');
+  back.innerText = symbol;
+  cardElement.appendChild(front);
+  cardElement.appendChild(back);
   cardElement.addEventListener('click', flipCard);
   return cardElement;
 }
 
 function flipCard() {
-  if (flippedCards.length < 2 && !flippedCards.includes(this)) {
+  if (flippedCards.length < 2 && !flippedCards.includes(this) && !this.classList.contains('flipped')) {
     this.classList.add('flipped');
     flippedCards.push(this);
 

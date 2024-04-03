@@ -36,6 +36,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
+    border: 2px black;
   }
   
   .card {
@@ -43,7 +44,6 @@ p {
     height: 100px;
     margin: 10px;
     background-color: #bbb9b9;
-    border: 2px black;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -54,5 +54,6 @@ p {
   
   .flipped {
     background-color: #c97a7a;
+
   }
   

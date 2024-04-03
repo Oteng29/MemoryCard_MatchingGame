@@ -1,4 +1,4 @@
-# Memory Card Matching Game
+# Matching Card Game
 
 Welcome to the Memory Card Matching Game project! This is a simple browser-based game built using HTML, CSS, and JavaScript. Test your memory and concentration skills by matching pairs of cards with identical symbols.
 
